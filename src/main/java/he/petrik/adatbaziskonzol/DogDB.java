@@ -12,7 +12,7 @@ public class DogDB {
     public static String DB_USERNAME = "root";
     public static String DB_PASSWORD = "";
 
-    private DogDB() throws SQLException {
+    public DogDB() throws SQLException {
         String url = String.format("jdbc:%s://%s:%s/%s", DB_DRIVER, DB_HOST, DB_PORT);
         conn = DriverManager.getConnection(url, DB_USERNAME, DB_PASSWORD);
     }
